@@ -15,15 +15,15 @@
   * Go to https://www.pgadmin.org/download/pgadmin-4-windows/
   * Download and install the lastest version of PGAdmin 4
   * Make sure to remember / note the credentials asked for authentication
-* Execute command ** npm install -g bower **
+* Execute command **npm install -g bower**
 
 ## * Server setup *
 * Install globally nodemon
-  * npm install nodemon@2.0.7 -g
-* In .env file make sure to replace POSTGRESQL_PASS with the password you set up on PostgreSQL installation
+  * **npm install nodemon@2.0.7 -g**
+* In .env file make sure to replace **POSTGRESQL_PASS** with the password you set up on PostgreSQL installation
 * In the root folder
-  * Execute the command ** npm install ** (all dependencies should install successfully)
-    * If ** npm install ** failes, try in a cmd with administrator rights
+  * Execute the command **npm install** (all dependencies should install successfully)
+    * If **npm install** failes, try in a cmd with administrator rights
   * Execute the command nodemon
   * If everything is ok, you should see in the console the following message:
   ```javascript
@@ -47,9 +47,9 @@
 
 ## *Client setup *
 * Navigate to project/client
-  * Execute the command ** npm install ** (all client dependencies should install successfully)
-  * Execute the command ** npm install -g gulp **
-  * In the same client folder, execute the command ** gulp **
+  * Execute the command **npm install** (all client dependencies should install successfully)
+  * Execute the command **npm install -g gulp**
+  * In the same client folder, execute the command **gulp**
   * If everything is ok, you should see in the console the following message:
   ```javascript
     λ gulp
