@@ -15,57 +15,61 @@
   * Go to https://www.pgadmin.org/download/pgadmin-4-windows/
   * Download and install the lastest version of PGAdmin 4
   * Make sure to remember / note the credentials asked for authentication
+* Execute command * npm install -g bower *
 
 ## * Server setup *
 * Install globally nodemon
   * npm install nodemon@2.0.7 -g
 * In .env file make sure to replace POSTGRESQL_PASS with the password you set up on PostgreSQL installation
 * In the root folder
-  * Execute the command npm install (all server dependencies should install successfully)
-* Navigate to /server
+  * Execute the command * npm install * (all dependencies should install successfully)
+    * If * npm install * failes, try in a cmd with administrator rights
   * Execute the command nodemon
   * If everything is ok, you should see in the console the following message:
   ```javascript
     λ nodemon
-    [nodemon] 2.0.4
+    [nodemon] 2.0.7
+    [nodemon] reading config .\nodemon.json
     [nodemon] to restart at any time, enter `rs`
+    [nodemon] or send SIGHUP to 7840 to restart
+    [nodemon] ignoring: **/config/*.yml **/node_modules/**/* **/public/**/*
     [nodemon] watching path(s): *.*
     [nodemon] watching extensions: js,mjs,json
-    [nodemon] starting `node ./server/app.js`
+    [nodemon] starting `node server/server.js`
+    [nodemon] forking
+    [nodemon] child pid: 22000
+    [nodemon] watching 30 files
+    Master 22000 is running
+    I am running with ID : 14624
     Database connection successfully.
-    Listening on port: 8080, env: dev
+    Listening on port: 2020, env: dev
   ```
 
 ## *Client setup *
-* Install angular cli globally
-  * npm install -g @angular/cli
 * Navigate to project/client
-  * Execute the command npm install (all client dependencies should install successfully)
-  * In the same client folder, execute the command npm start
+  * Execute the command * npm install * (all client dependencies should install successfully)
+  * Execute the command * npm install -g gulp *
+  * In the same client folder, execute the command * gulp *
   * If everything is ok, you should see in the console the following message:
   ```javascript
-    λ npm start
-
-    > person-app@0.0.0 start C:\Proiecte\person-app\client
-    > ng serve
-
-    √ Browser application bundle generation complete.
-
-    Initial Chunk Files   | Names         |      Size
-    vendor.js             | vendor        |   4.93 MB
-    styles.css, styles.js | styles        | 401.44 kB
-    polyfills.js          | polyfills     | 339.13 kB
-    main.js               | main          |  63.41 kB
-    runtime.js            | runtime       |   7.07 kB
-
-                          | Initial Total |   5.72 MB
-
-    Build at: 2021-11-05T12:55:50.984Z - Hash: 5286c543f6d25b2c - Time: 5989ms
-
-    ** Angular Live Development Server is listening on localhost:3000, open your browser on http://localhost:3000/ **
-
-
-    √ Compiled successfully.
+    λ gulp
+    [11:40:23] Using gulpfile C:\Software\test-app-js\gulpfile.js
+    [11:40:23] Starting 'default'...
+    [11:40:23] Starting 'clean'...
+    [11:40:23] Finished 'clean' after 30 ms
+    [11:40:23] Starting 'app-less-dev'...
+    [11:40:23] Starting 'admin-dev'...
+    [11:40:23] Starting 'app-dev'...
+    [11:40:23] Starting 'main-dev'...
+    [11:40:23] Starting 'information-dev'...
+    [11:40:23] Starting 'common-dev'...
+    [11:40:23] Finished 'app-dev' after 384 ms
+    [11:40:23] Finished 'main-dev' after 392 ms
+    [11:40:23] Finished 'information-dev' after 395 ms
+    [11:40:23] Finished 'admin-dev' after 434 ms
+    [11:40:23] Finished 'common-dev' after 479 ms
+    [11:40:23] Finished 'app-less-dev' after 497 ms
+    [11:40:23] Starting 'watch'...
   ```
 
 ### Cerintele temei
@@ -99,7 +103,7 @@
     * Prenume* - string, maxlength 255
     * CNP* - string, maxlength 13
     * Vârsta* - integer, maxlength 3
-    * Select multiplu (ng-select multiple) pentru mașini
+    * Select multiplu (ui-select multiple) pentru mașini
   * Funcționalitate
     * Vârsta va fi calculată automat din CNP
     * Câmpurile sunt obligatorii
