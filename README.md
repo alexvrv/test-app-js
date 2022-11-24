@@ -52,8 +52,7 @@
   ```
 
 ## *Client setup *
-* Navigate to project/client
-  * Execute the command **npm install** (all client dependencies should install successfully)
+* In the root folder
   * Execute the command **npm install -g gulp**
   * In the same client folder, execute the command **gulp**
   * If everything is ok, you should see in the console the following message:
